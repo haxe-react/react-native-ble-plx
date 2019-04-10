@@ -12,5 +12,5 @@ extern class Characteristic {
 	function read(?transactionId:String):js.Promise<Characteristic>;
 	function writeWithResponse(valueBase64:String, ?transactionId:String):js.Promise<Characteristic>;
 	function writeWithoutResponse(valueBase64:String, ?transactionId:String):js.Promise<Characteristic>;
-	function monitor(f:js.Error->Characteristic->Void, ?transactionId:String):Subscription;
+	function monitor(f:BleError->Characteristic->Void, ?transactionId:String):Subscription;
 }

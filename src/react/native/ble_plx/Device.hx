@@ -18,5 +18,5 @@ extern class Device {
 	function cancelConnection():js.Promise<Device>;
 	function discoverAllServicesAndCharacteristics():js.Promise<Device>;
 	function services():js.Promise<Array<Service>>;
-	function onDisconnected(f:js.Error->Device->Void):Subscription;
+	function onDisconnected(f:BleError->Device->Void):Subscription;
 }
