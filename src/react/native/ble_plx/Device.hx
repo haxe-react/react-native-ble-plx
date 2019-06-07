@@ -14,6 +14,7 @@ extern class Device {
 	var manufacturerData:String;
 	var serviceData:DynamicAccess<String>;
 	
+	function isConnected():js.Promise<Bool>;
 	function connect():js.Promise<Device>;
 	function cancelConnection():js.Promise<Device>;
 	function discoverAllServicesAndCharacteristics():js.Promise<Device>;
